@@ -25,7 +25,7 @@ const MapComponent = () => {
       if (!ip) return;
 
       try {
-        const response = await axios.get(`http://ip-api.com/json/${ip}`);
+        const response = await axios.get(`https://ip-api.com/json/${ip}`);
         const data = response.data;
         console.log(data);
         if (data.status === "success") {
@@ -93,7 +93,7 @@ const MapComponent = () => {
       <MapContainer center={position}  zoom={13} style={{ height: "600px", width: "100%" }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={position}>
           <Popup>
